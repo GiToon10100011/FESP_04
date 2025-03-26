@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="./calc.js"></script>
+  </head>
+  <body id="app">
+    <section id="calc-app">
+      <h1>덧셈 계산기</h1>
+      <form>
+        <fieldset>
+          <legend>계산기 입력폼</legend>
+          <div>
+            <label>x:</label>
+            <input class="x-input" dir="rtl" v-model.number="x" />
+            <label>y:</label>
+            <!-- v-bind는 단방향 바인드, v-model은 양방향 바인드  -->
+            <!-- 이러한 투웨이 바인드의 문제점이 있어 flux패턴을 적용한 리엑트가 등장하게 됨. -->
+            <!-- 리엑트는 mvc지만 투웨이 바인드가 없는 Mvc이다.  -->
+            <input class="y-input" dir="rtl" v-model.number="y" />
+            <span>=</span>
+            <span class="resultWindow" v-text="result">0</span>
+          </div>
+          <hr />
+          <div>
+            <input type="submit" value="초기화" />
+            <input
+              type="submit"
+              value="계산하기"
+              class="calculate-btn"
+              @click.prevent="calculateHandler"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
