@@ -1,0 +1,1 @@
+(()=>{var o={44:(o,r,d)=>{o=d.nmd(o),d(127),console.log(o.add()),console.log("hello")},127:(o,r)=>{r.add=function(){return 7}}},r={};function d(e){var n=r[e];if(void 0!==n)return n.exports;var l=r[e]={id:e,loaded:!1,exports:{}};return o[e](l,l.exports,d),l.loaded=!0,l.exports}d.nmd=o=>(o.paths=[],o.children||(o.children=[]),o),d(44)})()
