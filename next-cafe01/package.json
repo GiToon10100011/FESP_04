@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preprod": "npm run build",
+    "prod": "npm run start"
   },
   "dependencies": {
     "react": "^19.0.0",
