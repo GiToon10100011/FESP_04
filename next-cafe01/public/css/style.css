@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color-main-1: #5e2808;
+  --color-main-2: #944813;
+  --color-main-3: #d48700;
+
+  --rgb-main-1: 94, 40, 8;
+  --rgb-main-2: 148, 72, 19;
+  --rgb-main-3: 212, 135, 0;
+
+  --color-accent-1: #182774;
+  --color-accent-2: #334dcf;
+  --rgb-accent-1: 51, 77, 207;
+}
+
+.n-btn {
+  --btn-border-radius: 0;
+}
+
+.n-btn-color\:sub {
+  --color-sub-2: var(--color-sub-1);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+  /* font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
+  font-size: 14px;
+  height: 100%;
+  /* background-color: var(--color-base-9);     */
+
+  >div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    >main {
+      flex-grow: 1;
+    }
+  }
+}
+
+
+.n-icon-size\:8 {
+  --icon-size: var(--icon-size-8);
+  --icon-size: var(--icon-size-8);
+  
+  &::before {
+    font-size: var(--icon-size-8);
+  }
+}

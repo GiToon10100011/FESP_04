@@ -1,0 +1,145 @@
+.menus-box {
+    width: 100%;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .menus {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        .list {
+            padding-top: 30px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu-card {
+            width: 100%;
+            height: 80px;
+
+            display: flex;
+            gap: 20px;
+
+            .img-box {
+                flex-shrink: 0;
+
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .menu-info {
+                flex-grow: 1;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+
+                position: relative;
+
+                h1 {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                h2 {
+                    font-size: 12px;
+                    font-weight: normal;
+                    color: var(--color-base-5);
+                }
+
+                .price {
+                    margin-top: auto;
+                }
+
+                .like {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    display: flex;
+                    align-items: center;
+
+                    gap: 6px;
+
+                    .n-icon\:favorite {
+                        cursor: pointer;
+                    }
+
+                    .n-icon\:favorite:has(:checked)::before {                        
+                        font-variation-settings: "FILL" 1;
+                        color: red;
+                    }
+                }
+
+                .pay {
+                    display: flex;
+                    gap: 10px;
+
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .menus-box {
+        .menus {
+
+            align-items: center;
+
+
+            .list {
+
+                max-width: 1200px;
+
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+            }
+
+            .menu-card {
+                flex-direction: column;
+                width: 225px;
+                height: 270px;
+
+                gap: 10px;
+
+                .img-box {
+
+
+                    width: 100%;
+                    height: 180px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+            }
+        }
+    }
+}

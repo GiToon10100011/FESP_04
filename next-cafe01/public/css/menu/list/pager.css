@@ -1,0 +1,47 @@
+.pager {
+
+    margin-top: 40px;
+
+    h1 {
+        display: none;
+    }
+
+    .page-list-box {
+
+        display: flex;
+
+
+
+        ul {
+            display: flex;
+        }
+
+
+        >div,
+        ul>li {
+            border: 1px solid var(--color-base-4);
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+
+            margin: 0 5px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: var(--color-base-3);
+                color: var(--color-base-9);
+            }
+        }
+
+        ul>li.active {
+            border: none;
+            background-color: var(--color-main-1);
+            color: white;
+        }
+
+    }
+
+}

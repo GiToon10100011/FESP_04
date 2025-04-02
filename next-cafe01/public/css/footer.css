@@ -1,0 +1,29 @@
+.footer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 70px 0;
+    background-color: var(--color-base-9);
+
+    .footer {
+        text-align: center;
+        color: var(--color-base-1);
+
+        dl {
+            margin-top: 20px;
+        }
+
+        dl>div {
+            display: flex;
+            padding: 5px 0;
+
+
+
+            dd {
+                margin-left: 10px;
+            }
+        }
+    }
+}

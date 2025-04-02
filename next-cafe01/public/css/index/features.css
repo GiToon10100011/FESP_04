@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background-color: #3e2c1b;
+  /* Background color similar to the image */
+  color: #fff;
+  text-align: center;
+}
+
+.features-box {
+  color: #fff;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-2);
+
+    &::after {
+      content: "";
+      width: 100px;
+      height: 2px;
+      background-color: #fff;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 1px;
+    }
+
+    /* margin-bottom: 30px;
+        border-bottom: 2px solid #fff;
+        display: inline-block;
+        padding-bottom: 10px; */
+  }
+
+  .features {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-self: center;
+    gap: 20px;
+
+    > a {
+      &:nth-child(1) {
+        align-self: flex-start;
+      }
+
+      &:nth-child(2) {
+        align-self: center;
+      }
+
+      &:nth-child(3) {
+        align-self: flex-end;
+      }
+
+      .feature {
+        background-color: var(--color-base-1);
+        color: var(--color-base-8);
+        /* padding: 20px; */
+        /* border-radius: 10px; */
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+
+        > div {
+          padding: 20px;
+        }
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+
+        .feature-image {
+          width: 100%;
+
+          object-fit: cover;
+          /* border-radius: 10px; */
+        }
+
+        .feature-title {
+          font-size: 1.2rem;
+          margin: 15px 0;
+        }
+
+        .feature-description {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+
+        .feature-highlight {
+          color: #f7a900;
+          /* Highlight color */
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .features-box {
+    .features {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 20px;
+
+      .feature {
+        width: 300px;
+      }
+    }
+  }
+}

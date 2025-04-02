@@ -1,0 +1,1 @@
+Next.js 프로젝트 next-cafe01 생성
