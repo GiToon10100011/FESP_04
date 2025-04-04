@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React from "react";
+import styles from "./RootHeader.module.scss";
 
 const RootHeader = () => {
   return (
-    <header>
+    <header className={styles["n-header"]}>
       <h1>카페 이름</h1>
       <nav>
         <ul>

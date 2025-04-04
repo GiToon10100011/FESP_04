@@ -1,28 +1,27 @@
-"use client"
+"use client";
+import "./global.css";
+import "newtil-css/dist/style.min.css"; 
 import { ReactNode } from "react";
-import RootHeader from "./components/RootHeader";
-import RootFooter from "./components/RootFooter";
-// import './globals.css';
-
-// export const metadata = {
-//   title: 'Next Cafe',
-//   description: 'A modern coffee shop experience',
-// };
 
 type LayoutProps = {
   children: ReactNode;
 };
 
-const RootLayout = ({ children }: LayoutProps) => {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body>
-        <RootHeader />
-        {children}
-        <RootFooter />
-      </body>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Title</title>
+        <link
+          rel="stylesheet"
+          crossOrigin="anonymous"
+          as="style"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
-};
-
-export default RootLayout;
+}

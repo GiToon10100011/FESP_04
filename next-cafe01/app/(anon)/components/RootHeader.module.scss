@@ -1,0 +1,10 @@
+.header {
+  background-color: lavender;
+  & > nav {
+    border: 1px solid rgba(230, 230, 250, 0.5);
+  }
+}
+
+.a {
+  color: red;
+}
